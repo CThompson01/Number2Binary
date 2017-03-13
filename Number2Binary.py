@@ -1,22 +1,11 @@
 binary = ['0','0','0','0','0']
-def getNumber():
+binaryVal = [ 16, 8, 4, 2, 1]
+def main():
     binary = ['0','0','0','0','0']
-    number = int(raw_input('Please enter a number: '))
-    #print ''.join(binary)
-    if(number > 1):
-        if(number < 3):
-            binary[3] = '1'
-        elif(number > 3):
-            # have another nested if statement
-            print number
-        else:
-            binary[3] = '1'
-            binary[4] = '1'
-    elif(number == 1):
-        binary[4] = '1'
-    else:
-        for i in range(len(binary)):
-            binary[i] = '0'
+    number = int(raw_input('Please input a number: '))
+    for i in xrange(4,-1,-1):
+        if(binaryVal[i] == number):
+            binary[i] = '1'
     print ''.join(binary)
-    
-getNumber()
+
+main()
